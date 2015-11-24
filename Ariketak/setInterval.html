@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <title>Imagenes</title>
+        
+    </head>
+    <body>
+
+       
+       <script language="JavaScript">
+          var veces=0, num_color=1;
+        activa_color=window.setInterval("Emitir()",1000);
+      
+        function Emitir(){
+          if (num_color==1) {
+            document.bgColor="yellow"; num_color=2;
+          }else{
+            document.bgColor="aqua"; num_color=1;
+          }
+          veces+=1; 
+          if (veces >= 5){
+            window.clearInterval(activa_color);
+            alert ("Finalizó el cambio de color");
+          }
+        }
+
+        </script>
+    </body>
+</html>

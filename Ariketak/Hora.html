@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>MOSTRAR HORA</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//*********** EJERCICIO QUE MUESTRA LA HORA*************
+
+//mostrarHora();
+
+//function mostrarHora(){
+
+var fecha = new Date();
+var hora = fecha.getHours();
+var minutos = fecha.getMinutes();
+
+if((hora>8)&&(hora<12)){
+	document.write("buenos dias, son las " + hora + ":" + minutos + "horas");
+}else if ((hora>=12)&&(hora<20)){
+	document.write("buenas tardes, son las " + hora + ":" + minutos + "horas");
+}else document.write("buenas noches, son las " + hora + ":" + minutos + "horas");
+
+//}	
+
+</SCRIPT>
+
+</body>
+</html>

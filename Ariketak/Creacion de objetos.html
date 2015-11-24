@@ -1,0 +1,39 @@
+<!--Implementaremos un pequeño ejemplo que muestre un cuadrado, el mismo mostrará los bordes redondeados cuando ingresemos la flecha del mouse en su interior y volverá al estado anterior cuando retiremos la flecha.-->
+
+<html>
+<head>
+  <title>OBJETOS</title>
+<script type= "text/javascript"> 
+function cd (titulo, grupo, fecha){ 
+	this.titulo=titulo;
+	this.grupo =grupo ; 
+	this.fecha =fecha ;
+	this.mostrar=mostrarPantalla; //este es un método
+	//alert(this.titulo);
+}
+
+function mostrar(titulo, grupo, fecha){
+	document.write("<BR>Titulo: "+this.titulo);
+	document.write("<BR>Grupo: "+this.grupo);
+	document.write("<BR>Fecha: "+this.fecha);
+	document.write("<BR>");
+}
+
+for(var j=0;j<4;j++){
+var titulo = prompt("titulo: ", "");
+var grupo = prompt("grupo : ", "");
+var fecha = prompt("fecha : ", "");
+
+disco= new cd(titulo,grupo,fecha);
+
+disco.mostrarPantalla();
+}
+
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

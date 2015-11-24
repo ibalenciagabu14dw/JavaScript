@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+<script language="JavaScript">
+function controlarCaracteres()
+{
+if (document.form1.curriculum.value.length>10)
+alert('curriculum muy largo');
+else
+alert('datos correctos');
+}
+</script>
+<form name="form1">
+caja de texto tiene que tener 10 caracteres como maximo<br>
+<textarea name="curriculum" rows="10" cols="50" ></textarea>
+<br>
+<input type="button" value="Mostrar" onClick="controlarCaracteres()">
+</form>
+</body>
+</html>

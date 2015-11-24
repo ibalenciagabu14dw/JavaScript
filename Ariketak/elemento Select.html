@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>elemento select</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+                 background: linear-gradient(135deg, rgba(203,96,179,1) 0%, rgba(193,70,161,1) 4%, rgba(168,0,119,1) 35%, rgba(219,54,164,1) 83%, rgba(219,54,164,1) 93%);
+            }
+        </style>
+        <script type="text/javascript">
+            function calcular(){
+                
+                var resul = parseInt(document.getElementById("procesador").value) + parseInt(document.getElementById("monitor").value) + parseInt(document.getElementById("disco").value);
+                
+                document.getElementById("resultado").value= resul;
+            }
+        </script>
+    </head>
+    <body>
+            PROCESADOR:
+            <select name="procesador" id="procesador"><br><br>
+                <option selected="selected" value="" disabled>Selecciona uno</option>
+                <option value="400">Pentium III - $400</option>
+                <option value="500">Pentium IV $500</option>
+            </select><br><br>
+
+            MONITOR:
+            <select name="monitor" id="monitor"><br><br>
+                <option selected="selected" value="" disabled>Selecciona uno</option>
+                <option value="250">Samsung 14' - $250</option>
+                <option value="350">Samsung 15' - $350</option>
+                <option value="550">Samsung 17' - $550</option>
+            </select><br><br>
+
+            MONITOR:
+            <select name="disco" id="disco"><br><br>
+                <option selected="selected" value="" disabled>Selecciona uno</option>
+                <option value="300">80 Gb - $300</option>
+                <option value="440">240 Gb - $440</option>
+                <option value="500">800 Gb - $500</option>
+            </select><br><br>
+            
+            <button onclick="calcular()">CALCULAR</button>
+
+             <input type="text" id="resultado"/>
+
+    </body>
+</html>

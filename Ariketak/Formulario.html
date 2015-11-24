@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2.20 Formulario Javascript</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+                background: linear-gradient(#EE82EE,#4B0082);
+            }
+           /* #nformacion{
+                    background: linear-gradient(#32CD32,#00FA9A);
+            }*/
+        </style>
+        <script type="text/javascript">
+            function informar(){
+                if (document.getElementById("si").checked == true){
+                    document.getElementById("informacion").innerHTML= "INFORMACION nombre: " +  document.getElementById("nombre").value + "Hoy es " + document.getElementById("diasemana").value;
+                }else document.getElementById("informacion").innerHTML= "";
+            }
+            
+        </script>
+    </head>
+    <body>
+            <form onsubmit="informar(); return false">
+            Nombre: <input type="text" id="nombre"/><br><br>
+            
+            <select name="diasemana" id="diasemana"><br><br>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+            </select><br><br>
+            
+            <input type="radio" value="si" name="pregunta" id="si"/> SI 
+            <input type="radio" value="no" name="pregunta" id="no"/> NO <br>
+            
+            <div id="informacion"></div><br>
+            
+            <input type="submit" value="ENVIAR"/>
+            </form>
+    </body>
+</html>

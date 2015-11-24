@@ -1,0 +1,22 @@
+<!--Implementaremos un pequeño ejemplo que muestre un cuadrado, el mismo mostrará los bordes redondeados cuando ingresemos la flecha del mouse en su interior y volverá al estado anterior cuando retiremos la flecha.-->
+
+<html>
+<head>
+  <title>Eventos Raton</title>
+<script type= "text/javascript"> 
+function redondearBorde(){
+  document.getElementById("hockey").style.borderRadius= "25px";
+}
+
+function alisarBorde(){
+  document.getElementById("hockey").style.borderRadius= "5px";
+}
+
+</script>
+</head>
+
+<body>
+<img src="../images/hockey.jpg" onmouseover="redondearBorde()" onmouseout="alisarBorde()" id="hockey" border="5px">
+</body>
+
+</html>

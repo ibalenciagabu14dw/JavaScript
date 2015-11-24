@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Operaciones numericas</title>
+<SCRIPT languaje="javaScript">
+
+	var cadena = new Array();
+
+	document.write("introducimos los numeros del 10 al 20 en el array:");
+
+	for(i=10;i<=20;i++){
+		
+		cadena.push(i);
+	}
+
+	document.write(cadena + '<br/><br/>');
+
+	document.write("introducimos el numero 9 al comienzo del array");
+	cadena.unshift(9);
+	document.write(cadena + '<br/><br/>');
+
+	document.write("introducimos el numero 21 al final del array");
+	cadena.push(21);
+	document.write(cadena + '<br/><br/>');
+
+	document.write("Insertamos los numeros desde el 12.1 al 12.9  de forma que queden justo despues del numero 12");
+	var posicion=(cadena.indexOf(12)+1);
+	var numero = 12.1;
+	var cont;
+	for(i=0;i<=9;i++){
+		cont=redondear(numero);
+		cadena.splice(posicion, 0, cont);
+		numero+=0.1;
+		posicion++;
+	}
+	document.write(cadena + '<br/><br/>');
+	//funcion para redondear
+	function redondear(numero){
+		var flotante = parseFloat(numero);
+		var resultado = Math.round(flotante * 10)/10;
+		return resultado;
+	}
+
+	document.write("Extraemos el primer elemento del vector por el principio (izquierda)");
+	var cadenatemp = cadena.slice(0,1);
+	document.write(cadenatemp + '<br/><br/>');
+
+	document.write("Extraemos el primer elemento del vector por el final (derecha)");
+	var cadenatemp = cadena.slice(-1);
+	document.write(cadenatemp + '<br/><br/>');
+
+	document.write("Crea un vector que contenga los elementos que van desde la posicion 3 a la 11 del vector (ambas inclusive)");
+	var cadenatemp = cadena.slice(2,12);
+	document.write(cadenatemp + '<br/><br/>');
+
+	document.write("Elimina los elementos que van desde la posicion 13 a la 15 (ambas inclusive)");
+	cadena.splice(13, 3);
+	document.write(cadena + '<br/><br/>');
+
+	document.write("Reemplazamos los números  desde 12.1 hasta 12.9 (ambos inclusive) por 22.1 hasta 22.9");
+	numero = 22.1;
+	cont;
+	posicion=(cadena.indexOf(12));
+	for(i=0;i<=9;i++){
+		cont=redondear(numero);
+		cadena.splice(posicion, 1, cont);
+		numero+=0.1;
+		posicion++;
+	}
+	document.write(cadena + '<br/><br/>');
+
+	document.write("Ordenamos el vector descendentemente");
+	cadena.reverse(cadena.sort());
+	document.write(cadena + '<br/><br/>');
+
+	document.write("Crea una cadena con todos los elementos del vector, separandolos por el caracter guion");
+	cadena.split("-");
+	document.write(cadena + '<br/><br/>');
+
+</SCRIPT>
+
+</head>
+</body>
+</html>

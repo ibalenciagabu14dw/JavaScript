@@ -1,0 +1,27 @@
+<!--Crear un script que muestre un mensaje de bienvenida distinto para cada día de la semana del día actual-->
+
+<html>
+
+<head>
+<script type="text/javascript">
+    var cont=2;
+    function insertar(){
+       
+       var elemento = document.createElement("option");
+       elemento.text= cont;
+       elemento.value= cont;
+       document.getElementById("lista").add(elemento);
+       cont++;
+    }
+
+</script>
+</head>
+
+<body>
+    <select id="lista"><br><br>
+        <option value="1">1</option>
+    </select>
+    <button id="insertar" onclick="insertar()">INSERTAR</button>
+</body>
+
+</html>

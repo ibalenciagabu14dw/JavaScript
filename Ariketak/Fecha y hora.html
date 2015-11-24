@@ -1,0 +1,43 @@
+<!--Crear un script que muestre un mensaje con la fecha y hora actual pero utilizando el siguiente formato:" Hoy es día 3 de Mayo de 2001 y en estos momentos son las 17:30-->
+
+<html>
+
+<head>
+<script type="text/javascript">
+
+var d = new Date();
+
+var textomes = new Array (12);
+  textomes[1]="Enero";
+  textomes[2]="Febrero";
+  textomes[3]="Marzo";
+  textomes[4]="Abril";
+  textomes[5]="Mayo";
+  textomes[6]="Junio";
+  textomes[7]="Julio";
+  textomes[7]="Agosto";
+  textomes[9]="Septiembre";
+  textomes[10]="Octubre";
+  textomes[11]="Noviembre";
+  textomes[12]="Diciembre";
+
+  //si la hora es menor de 10, ponemos el 0 por delante
+  if (d.getHours()<10){
+ 	var hora = '0' + d.getHours();
+ } else var hora = d.getHours();
+
+ //si el minuto es menor de 10, ponemos el 0 por delante
+  if (d.getMinutes()<10){
+ 	var minuto = '0' + d.getMinutes();
+ } else var minuto = d.getMinutes();
+
+document.write("Hoy es dia " + d.getDate() + " de " + textomes[d.getMonth()+1] + " de " + d.getFullYear() + " y en estos momentos son las " + hora + ":" + minuto);
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

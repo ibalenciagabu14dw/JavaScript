@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>VALIDATE1</title>
+
+	<script type="text/javascript" src="funciones.js"></script>
+
+	<style type="text/css" media="screen">
+		body{
+			text-align: center;
+
+		}
+		fieldset{
+			width: 40%;
+			margin: auto;
+			background-color: #F7F79B;
+		}
+	</style>
+
+</head>
+<body>
+	<fieldset>
+		
+		<form id="formulario">
+			<table>
+				<tr>
+					<td>Nombre(*):<input type="text" id="nombre" name="nombre"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" id="radio" name="radio" value="rojo">rojo
+  						<input type="radio" id="radio" name="radio" value="verde">verde
+  						<input type="radio" id="radio" name="radio" value="azul" checked>azul
+  					</td>
+				</tr>
+			</table><br>
+			<input type="button" value="VALIDAR" id="btn" onclick="validar()">
+		</form>
+	</fieldset>
+
+	<div id= "respuesta">
+	
+</body>
+</html>

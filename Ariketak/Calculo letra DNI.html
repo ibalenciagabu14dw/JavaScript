@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Operaciones numericas</title>
+<SCRIPT languaje="javaScript">
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+var numero = prompt("Introduce el numero del DNI","");
+if (numero.toString().length == 8 && !isNaN(numero)){
+	
+	alert("La letra del DNI es: " + letras[numero%23]);
+} 
+else{
+	alert("No has introducido un numero correcto");
+}
+
+</SCRIPT>
+
+</head>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>FUNCIONES</title>
+	
+	<script type="text/javascript" charset="utf-8">
+
+	var numero = prompt("Introduce un numero: ","");
+	paroimpar(numero);
+	var palabra = prompt("Introduce una palabra: ","");
+	mayusminus(palabra);
+	palindromo(palabra);
+
+
+	function paroimpar(numero){
+		if(numero%2 == 0){
+			alert("el numero es par");
+		}else alert("el numero es impar");
+	}	
+
+	function mayusminus(cadena){
+		if(cadena==cadena.toUpperCase()){
+			alert("la cadena esta formada por SOLO mayusculas");
+		}else if(cadena==cadena.toLowerCase()){
+			alert("la cadena esta formada por SOLO minusculas");
+			}else alert("la cadena esta formada por mayusculas y minusculas");
+	
+	}	
+
+	function palindromo(cadena){
+		var resultado = "La cadena \""+cadena+"\" \n";
+ 
+		// Pasar a minusculas la cadena
+	  	var cadenaOriginal = cadena.toLowerCase();
+	 
+	  	// Convertir la cadena en un array
+		var letrasEspacios = cadenaOriginal.split("");
+
+		// Eliminar los espacios en blanco (este paso es demasiado largo ya que no se utiliza la funcion "replace")
+		var cadenaSinEspacios = "";
+		for(i in letrasEspacios) {
+		if(letrasEspacios[i] != " ") {
+		  cadenaSinEspacios += letrasEspacios[i];
+		}
+		}
+
+		var letras = cadenaSinEspacios.split("");
+		var letrasReves = cadenaSinEspacios.split("").reverse();
+
+		// Este paso tambien es muy largo porque no se utiliza la sentencia "break"
+		var iguales = true;
+		for(i in letras) {
+		if(letras[i] == letrasReves[i]) {
+		  // Todo bien
+		}
+		else {
+		  // Alguna letra es distinta, por lo que ya no es un palindromo
+		  iguales = false;
+		}
+		}
+
+		if(iguales) {
+		alert("es un palindromo");
+		}
+		else {
+		alert("NO es un palindromo");
+		}
+	}
+
+	</script>
+
+</head>
+
+<body>
+</body>
+</html>

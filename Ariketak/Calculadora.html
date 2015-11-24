@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2.20 Formulario Javascript</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+               background: linear-gradient(135deg, rgba(203,96,179,1) 0%, rgba(193,70,161,1) 4%, rgba(168,0,119,1) 35%, rgba(219,54,164,1) 83%, rgba(219,54,164,1) 93%);
+            }
+            button{
+                background-color: #59C0EC;
+            }
+
+            #resultado{
+                background-color:#63DC94;
+            }
+           
+        </style>
+        <script type="text/javascript">
+            function sumar(){
+                document.getElementById("resultado").innerHTML= parseInt(document.getElementById("numero1").value) + parseInt(document.getElementById("numero2").value);
+            }
+            function restar(){
+                document.getElementById("resultado").innerHTML= parseInt(document.getElementById("numero1").value) - parseInt(document.getElementById("numero2").value);
+            }
+            function multiplicar(){
+                document.getElementById("resultado").innerHTML= parseInt(document.getElementById("numero1").value) * parseInt(document.getElementById("numero2").value);
+            }
+            function dividir(){
+                document.getElementById("resultado").innerHTML= parseInt(document.getElementById("numero1").value) / parseInt(document.getElementById("numero2").value);
+            }
+        </script>
+    </head>
+    <body>
+            
+            <input type="text" id="numero1"/><br><br>
+            <input type="text" id="numero2"/><br><br>
+            <button id="suma" onclick="sumar()">+</button>
+            <button id="resta" onclick="restar()">-</button>
+            <button id="multiplicacion" onclick="multiplicar()">*</button>
+            <button id="divisiion" onclick="dividir()">/</button><br><br>
+            
+            <div id="resultado"></div><br>
+            
+            
+    </body>
+</html>
